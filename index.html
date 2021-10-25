@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/pixi.min.js"></script>
+    <script>
+		var app = new PIXI.Application(1440,900);
+        document.body.appendChild(app.view);
+        
+        var bg = new PIXI.Sprite.fromImage("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2Feb%2F1a%2F58%2Feb1a58dff1f6bbc4720397083a6346ad.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637753263&t=95d0391469919e98d72508aa4b55c992");
+        app.stage.addChild(bg);
+        
+        var anniu = new PIXI.Sprite.fromImage("res/jiyi.png");
+        app.stage.addChild(anniu);
+        anniu.x = 200;
+        anniu.y = 400;
+        
+        var nezha = new PIXI.Sprite.fromImage("https://img2.baidu.com/it/u=3145978411,2168755359&fm=26&fmt=auto");
+        var zhuzhuxia = new PIXI.Sprite.fromImage("https://img0.baidu.com/it/u=3549364577,2456841123&fm=26&fmt=auto");
+        var chenglong = new PIXI.Sprite.fromImage("https://img1.baidu.com/it/u=3566392824,2744252205&fm=26&fmt=auto");
+        var xiyangyang = new PIXI.Sprite.fromImage("https://img1.baidu.com/it/u=1396387495,3687405328&fm=26&fmt=auto");
+        var haimianbaobao = new PIXI.Sprite.fromImage("https://img2.baidu.com/it/u=4233678829,4138054217&fm=26&fmt=auto");
+        var maohelaoshu = new PIXI.Sprite.fromImage("https://img0.baidu.com/it/u=2316171857,1009035661&fm=26&fmt=auto");
+        
+        anniu.interactive = true;
+        anniu.on("click",change);
+        function change(){
+        	app.stage.addChild(nezha);
+        	app.stage.addChild(zhuzhuxia);
+        	app.stage.addChild(chenglong);
+        	app.stage.addChild(xiyangyang);
+        	app.stage.addChild(haimianbaobao);
+        	app.stage.addChild(maohelaoshu);
+        	maohelaoshu.x = 1000;
+        	maohelaoshu.y = 550;
+        	haimianbaobao.x = 1000;
+        	haimianbaobao.y = 50;
+        	chenglong.x = 450;
+        	chenglong.y = 0;
+        	xiyangyang.x = 50;
+        	xiyangyang.y = 550;
+        	nezha.x = 450;
+        	nezha.y = 500;
+        	zhuzhuxia.x = 0
+        	zhuzhuxia.y = 80;
+        	anniu.visible = false;
+        	
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
